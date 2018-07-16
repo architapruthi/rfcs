@@ -65,7 +65,6 @@ of the document `text/0000-my-feature.md` with the URL of the pull request.
 * Eventually, the core team will decide whether the RFC is a candidate
 for inclusion in CppMicroServices.
 * An RFC can be modified based upon feedback from the core team and community.
-Significant modifications may trigger a new final comment period.
 * An RFC may be rejected by the core team after public discussion has settled
 and comments have been made summarizing the rationale for rejection. A member of
 the core team should then close the RFC's associated pull request.
