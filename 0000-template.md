@@ -1,6 +1,6 @@
 - Start Date: (fill me in with today's date, YYYY-MM-DD)
-- RFC PR: (leave this empty)
-- CppMicroServices Issue: (leave this empty)
+- RFC PR: (in a subsequent commit to the PR, fill me with the PR's URL)
+- CppMicroServices Issue: (fill me with the URL of the CppMicroServices issue that necessisated this RFC, otherwise leave blank)
 
 # (RFC title goes here)
 
