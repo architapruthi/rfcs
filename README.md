@@ -53,14 +53,15 @@ into CppMicroServices.
 * Copy `0000-template.md` to `text/0000-my-feature.md` (where
 'my-feature' is descriptive. don't assign an RFC number yet).
 * Fill in the RFC. Put care into the details: **Typically, RFCs will have
-convincing motivation, demonstrate understanding of the
-impact of the design, and detail the drawbacks or
-alternatives**.
+convincing motivation, demonstrate understanding of the impact of the design,
+and detail the drawbacks or alternatives**.
 * You can also choose to flesh out the design more formally - detailing the
 Requirements, Use Cases Analysis, Design Cases, Architectural Design etc.
 * Submit a pull request. As a pull request the RFC will receive design
 feedback from the core team and the larger community, and the author should
 be prepared to revise it in response.
+* In a subsequent commit to the pull request, fill in the **RFC PR** header
+of the document `text/0000-my-feature.md` with the URL of the pull request.
 * Eventually, the core team will decide whether the RFC is a candidate
 for inclusion in CppMicroServices.
 * An RFC can be modified based upon feedback from the core team and community.
@@ -68,7 +69,7 @@ Significant modifications may trigger a new final comment period.
 * An RFC may be rejected by the core team after public discussion has settled
 and comments have been made summarizing the rationale for rejection. A member of
 the core team should then close the RFC's associated pull request.
-* An RFC may be accepted at the close of its final comment period. A core team
+* An RFC may be accepted after the public discussion has settled. A core team
 member will merge the RFC's associated pull request, at which point the RFC will
 become 'active'.
 
@@ -89,7 +90,7 @@ to write each RFC in a manner that it will reflect the final design of
 the feature; but the nature of the process means that we cannot expect
 every merged RFC to actually reflect what the end result will be at
 the time of the next major release; therefore we try to keep each RFC
-document somewhat in sync with the language feature as planned,
+document somewhat in sync with the Framework feature as planned,
 tracking such changes via followup pull requests to the document.
 
 ## Implementing an RFC
