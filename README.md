@@ -62,15 +62,21 @@ feedback from the core team and the larger community, and the author should
 be prepared to revise it in response.
 * In a subsequent commit to the pull request, fill in the **RFC PR** header
 of the document `text/0000-my-feature.md` with the URL of the pull request.
-* Eventually, the core team will decide whether the RFC is a candidate
-for inclusion in CppMicroServices.
-* An RFC can be modified based upon feedback from the core team and community.
-* An RFC may be rejected by the core team after public discussion has settled
-and comments have been made summarizing the rationale for rejection. A member of
-the core team should then close the RFC's associated pull request.
-* An RFC may be accepted after the public discussion has settled. A core team
-member will merge the RFC's associated pull request, at which point the RFC will
-become 'active'.
+* At some point after the submission of the pull request, 
+RFCs that are candidates for inclusion in CppMicroServices will enter a
+"final comment period" (FCP) lasting about two weeks. At-least three members of
+the core team will comment on the RFC during this window, if they hadn't done before.
+The beginning of this period will be signaled with a comment and tag on the RFC's
+pull request.
+* An RFC may be rejected by the core team after the FCP and comments have been made
+summarizing the rationale for rejection. A member of the core team should then close
+the RFC's associated pull request.
+* An RFC may be accepted after the FCP.  A core team member
+will rename the RFC from `text/0000-my-feature.md` to `text/XXXX-my-feature.md`,
+where `XXXX` represents `the count of already approved pull requests + 1`. For example,
+if the last approved RFC was named `text/0037-foo-feature.md`, the current approved
+RFC will be renamed `text/0038-bar-feature.md`. Then, that member will merge the RFC's
+associated pull request, at which point the RFC will become 'active'.
 
 ## The RFC life-cycle
 
