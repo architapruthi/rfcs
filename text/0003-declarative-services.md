@@ -333,7 +333,7 @@ associated with it and a well-defined lifecycle. A service component may
 provide a service, consume other services (references) and has
 properties.
 
-![Service Component](0000-declarative-services/ServiceComponent.png "Service Component")
+![Service Component](0003-declarative-services/ServiceComponent.png "Service Component")
 
 A service component needs the following artifacts in the bundle.
 
@@ -363,7 +363,7 @@ unsatisfied and hence is deactivated. The component instance created
 during the activation phase is destroyed during the deactivation phase
 of the lifecycle.
 
-![Component Lifecycle](0000-declarative-services/Component_Lifecycle_Delayed.png
+![Component Lifecycle](0003-declarative-services/Component_Lifecycle_Delayed.png
 "Component Lifecycle")
 
 The design can be divided into the following functional pieces:
@@ -1154,7 +1154,7 @@ the runtime to create and interact with the service implementation
 objects. The generated CPP file is compiled and linked into the bundle
 binary.  
 The data flow in code generation step is illustrated in the following
-diagram. ![Dataflow in code generation step](0000-declarative-services/Dataflow_Code_Generator.png
+diagram. ![Dataflow in code generation step](0003-declarative-services/Dataflow_Code_Generator.png
 "Dataflow in code generation step")
 
 The rest of this section describes the interface of the generated code.
@@ -1488,7 +1488,7 @@ bundles.
 <tbody>
 <tr class="odd">
 <td><html>
-<p><img src="0000-declarative-services/Declarative_Services_bundle_interaction.svg" style="width:100%"/></p>
+<p><img src="0003-declarative-services/Declarative_Services_bundle_interaction.svg" style="width:100%"/></p>
 </html></td>
 </tr>
 </tbody>
@@ -1522,10 +1522,10 @@ instantiation aspects of declarative services.
 <tbody>
 <tr class="odd">
 <td><html>
-<p><img src="0000-declarative-services/ServiceInteraction_CoreFramework.svg" style="width:500px"/></p>
+<p><img src="0003-declarative-services/ServiceInteraction_CoreFramework.svg" style="width:500px"/></p>
 </html></td>
 <td><html>
-<p><img src="0000-declarative-services/ServiceInteraction_DS.svg" style="width:600px"/></p>
+<p><img src="0003-declarative-services/ServiceInteraction_DS.svg" style="width:600px"/></p>
 </html></td>
 </tr>
 </tbody>
@@ -1571,7 +1571,7 @@ following picture illustrates how the asynchronous requests are handled.
 <tbody>
 <tr class="odd">
 <td><html>
-<p><img src="0000-declarative-services/Async_Interaction.svg" style="width:100%"/></p>
+<p><img src="0003-declarative-services/Async_Interaction.svg" style="width:100%"/></p>
 </html></td>
 </tr>
 </tbody>
@@ -1603,7 +1603,7 @@ components
 
 <html>
 
-<img src="0000-declarative-services/Functional_Units_Interaction.svg" style="width:80%"/>
+<img src="0003-declarative-services/Functional_Units_Interaction.svg" style="width:80%"/>
 
 </html>
 
@@ -1651,7 +1651,7 @@ bundle.
 
 <html>
 
-<img src="0000-declarative-services/Declarative_Services_Class_Diagram.svg" style="width:1400px"/>
+<img src="0003-declarative-services/Declarative_Services_Class_Diagram.svg" style="width:1400px"/>
 
 </html>
 
@@ -1790,7 +1790,7 @@ machine
 
 <html>
 
-<img src="0000-declarative-services/ComponentManager_state_diagram.svg" width="50%"/>
+<img src="0003-declarative-services/ComponentManager_state_diagram.svg" width="50%"/>
 
 </html>
 
@@ -1820,7 +1820,7 @@ metadata.
 
 <html>
 
-<img src="0000-declarative-services/ComponentConfiguration_state_diagram.svg" width="50%"/>
+<img src="0003-declarative-services/ComponentConfiguration_state_diagram.svg" width="50%"/>
 
 </html>
 
@@ -1965,7 +1965,7 @@ system.
 
 <html>
 
-<img src="0000-declarative-services/ServiceComponentRuntime_EnableComponent_v5.svg" style="width:60%"/>
+<img src="0003-declarative-services/ServiceComponentRuntime_EnableComponent_v5.svg" style="width:60%"/>
 
 </html>
 
@@ -1973,7 +1973,7 @@ system.
 
 <html>
 
-<img src="0000-declarative-services/ServiceComponentRuntime_DisableComponent_v5.svg" style="width:60%"/>
+<img src="0003-declarative-services/ServiceComponentRuntime_DisableComponent_v5.svg" style="width:60%"/>
 
 </html>
 
@@ -1981,7 +1981,7 @@ system.
 
 <html>
 
-<img src="0000-declarative-services/Management_Agent_Retrieve_Configurations.svg" style="width:50%"/>
+<img src="0003-declarative-services/Management_Agent_Retrieve_Configurations.svg" style="width:50%"/>
 
 </html>
 
@@ -1989,7 +1989,7 @@ system.
 
 <html>
 
-<img src="0000-declarative-services/ComponentDisablingItself_v4.svg" style="width:60%"/>
+<img src="0003-declarative-services/ComponentDisablingItself_v4.svg" style="width:60%"/>
 
 </html>
 
@@ -1997,7 +1997,7 @@ system.
 
 <html>
 
-<img src="0000-declarative-services/ServiceConsumerWorkflow_v3.svg" style="width:60%"/>
+<img src="0003-declarative-services/ServiceConsumerWorkflow_v3.svg" style="width:60%"/>
 
 </html>
 
@@ -2005,7 +2005,7 @@ system.
 
 <html>
 
-<img src="0000-declarative-services/DependencyBecomesAvailable_v3.svg" style="width:60%"/>
+<img src="0003-declarative-services/DependencyBecomesAvailable_v3.svg" style="width:60%"/>
 
 </html>
 
@@ -2013,7 +2013,7 @@ system.
 
 <html>
 
-<img src="0000-declarative-services/DependencyBecomesUnsatisfied_v3.svg" style="width:60%"/>
+<img src="0003-declarative-services/DependencyBecomesUnsatisfied_v3.svg" style="width:60%"/>
 
 </html>
 
@@ -2026,7 +2026,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/SCRBundleActivator_Start.svg" style="width:500px"/>
+<img src="0003-declarative-services/SCRBundleActivator_Start.svg" style="width:500px"/>
 
 </html>
 
@@ -2034,7 +2034,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/SCRBundleActivator_Stop.svg" style="width:900px"/>
+<img src="0003-declarative-services/SCRBundleActivator_Stop.svg" style="width:900px"/>
 
 </html>
 
@@ -2042,7 +2042,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/SCRBundleActivator_BundleChanged.svg" style="width:900px"/>
+<img src="0003-declarative-services/SCRBundleActivator_BundleChanged.svg" style="width:900px"/>
 
 </html>
 
@@ -2050,7 +2050,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ServiceComponentRuntimeImpl_EnableComponent.svg" style="width:600px"/>
+<img src="0003-declarative-services/ServiceComponentRuntimeImpl_EnableComponent.svg" style="width:600px"/>
 
 </html>
 
@@ -2058,7 +2058,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ServiceComponentRuntimeImpl_DisableComponent.svg" style="width:600px"/>
+<img src="0003-declarative-services/ServiceComponentRuntimeImpl_DisableComponent.svg" style="width:600px"/>
 
 </html>
 
@@ -2066,7 +2066,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ComponentContextImpl_EnableComponent.svg" style="width:700px"/>
+<img src="0003-declarative-services/ComponentContextImpl_EnableComponent.svg" style="width:700px"/>
 
 </html>
 
@@ -2074,7 +2074,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ComponentContextImpl_DisableComponent.svg" style="width:700px"/>
+<img src="0003-declarative-services/ComponentContextImpl_DisableComponent.svg" style="width:700px"/>
 
 </html>
 
@@ -2082,7 +2082,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ComponentManager_Enable.svg" style="width:50%"/>
+<img src="0003-declarative-services/ComponentManager_Enable.svg" style="width:50%"/>
 
 </html>
 
@@ -2090,7 +2090,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ComponentManager_Disable.svg" style="width:50%"/>
+<img src="0003-declarative-services/ComponentManager_Disable.svg" style="width:50%"/>
 
 </html>
 
@@ -2098,7 +2098,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ComponentConfiguration_Resolve.svg" style="width:40%"/>
+<img src="0003-declarative-services/ComponentConfiguration_Resolve.svg" style="width:40%"/>
 
 </html>
 
@@ -2106,7 +2106,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ComponentConfiguration_GetService.svg" style="width:40%"/>
+<img src="0003-declarative-services/ComponentConfiguration_GetService.svg" style="width:40%"/>
 
 </html>
 
@@ -2114,7 +2114,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/UnsatisfiedReferenceState_Register.svg" style="width:50%"/>
+<img src="0003-declarative-services/UnsatisfiedReferenceState_Register.svg" style="width:50%"/>
 
 </html>
 
@@ -2122,7 +2122,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/SatisfiedState_Activate.svg" style="width:50%"/>
+<img src="0003-declarative-services/SatisfiedState_Activate.svg" style="width:50%"/>
 
 </html>
 
@@ -2130,7 +2130,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/SatisfiedState_DoActivate.svg" style="width:50%"/>
+<img src="0003-declarative-services/SatisfiedState_DoActivate.svg" style="width:50%"/>
 
 </html>
 
@@ -2138,7 +2138,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/SatisfiedState_Deactivate.svg" style="width:50%"/>
+<img src="0003-declarative-services/SatisfiedState_Deactivate.svg" style="width:50%"/>
 
 </html>
 
@@ -2146,7 +2146,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/SatisfiedState_DoDeactivate.svg" style="width:30%"/>
+<img src="0003-declarative-services/SatisfiedState_DoDeactivate.svg" style="width:30%"/>
 
 </html>
 
@@ -2154,7 +2154,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ActiveState_DoDeactivate.svg" style="width:50%"/>
+<img src="0003-declarative-services/ActiveState_DoDeactivate.svg" style="width:50%"/>
 
 </html>
 
@@ -2162,7 +2162,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ReferenceManager_AddingService.svg" style="width:50%"/>
+<img src="0003-declarative-services/ReferenceManager_AddingService.svg" style="width:50%"/>
 
 </html>
 
@@ -2170,7 +2170,7 @@ SCR.
 
 <html>
 
-<img src="0000-declarative-services/ReferenceManager_RemovedService.svg" style="width:50%"/>
+<img src="0003-declarative-services/ReferenceManager_RemovedService.svg" style="width:50%"/>
 
 </html>
 
