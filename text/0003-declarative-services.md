@@ -18,8 +18,7 @@ Table of Contents
             * [UC1: Publish a service](#uc1-publish-a-service)
             * [UC2: Create services with dependencies](#uc2-create-services-with-dependencies)
             * [UC3: Get service dependency information](#uc3-get-service-dependency-information)
-            * [UC4: Build Tool access into dependency information](#uc4-build-tool-access-into-dependency-information)
-            * [UC5: Service Provider Framework](#uc5-service-provider-framework)
+            * [UC4: Service Provider Framework](#uc4-service-provider-framework)
          * [Pain Point Summary](#pain-point-summary)
          * [Requirements](#requirements)
       * [Functional Design](#functional-design)
@@ -439,13 +438,13 @@ service information that is used for service registration.
 <td><p>string</p></td>
 <td><p>Service scope to be used when the component is registered as a service. Valid values are:</p>
 <ol>
-<li>&quot;Singleton&quot; - Only one instance of the service component is ever created.</li>
-<li>&quot;Bundle&quot; - A new instance of the Service Component is created per bundle.</li>
-<li>&quot;Prototype&quot; - A new instance of the Service Component is created per service request.<br />
+<li>&quot;singleton&quot; - Only one instance of the service component is ever created.</li>
+<li>&quot;bundle&quot; - A new instance of the Service Component is created per bundle.</li>
+<li>&quot;prototype&quot; - A new instance of the Service Component is created per service request.<br />
 </li>
 </ol></td>
 <td>No</td>
-<td><p>&quot;Singleton&quot;</p></td>
+<td><p>&quot;singleton&quot;</p></td>
 </tr>
 </tbody>
 </table>
@@ -499,24 +498,24 @@ See <a href="Declarative_Services_RFA#Dependency_Injection" title="wikilink">Dep
 <td><p>string</p></td>
 <td><p>The policy describes the dynamic nature of the component. Possible values are:</p>
 <ol>
-<li>&quot;Static&quot; - Anytime a dependency becomes unsatisfied, the component instance is deactivated.</li>
-<li>&quot;Dynamic&quot; - The component dependencies are rebound without deactivating the component.<br />
+<li>&quot;static&quot; - Anytime a dependency becomes unsatisfied, the component instance is deactivated.</li>
+<li>&quot;dynamic&quot; - The component dependencies are rebound without deactivating the component.<br />
 </li>
 </ol>
 <p><strong>Note:</strong> <em>Dynamic policy is not supported in iteration 1. See <a href="Declarative_Services_RFA#Compatibility" title="wikilink">Compatibility</a> section for more details</em></p></td>
 <td>No</td>
-<td><p>&quot;Static&quot;</p></td>
+<td><p>&quot;static&quot;</p></td>
 </tr>
 <tr class="odd">
 <td><p>policy-option</p></td>
 <td><p>string</p></td>
 <td><p>Defines the policy when a better service becomes available. Possible values are:</p>
 <ol>
-<li>&quot;Reluctant&quot; - Once a reference is bound, the component stays active until that bound service is available, even if a better-matched service becomes available.</li>
-<li>&quot;Greedy&quot; - Re-bind to the better-matched service. Rebinding for static policy involves deactivating the component and reactivating it, whereas for the dynamic policy the component stays active while the rebinding is done.</li>
+<li>&quot;reluctant&quot; - Once a reference is bound, the component stays active until that bound service is available, even if a better-matched service becomes available.</li>
+<li>&quot;greedy&quot; - Re-bind to the better-matched service. Rebinding for static policy involves deactivating the component and reactivating it, whereas for the dynamic policy the component stays active while the rebinding is done.</li>
 </ol></td>
 <td>No</td>
-<td><p>&quot;Reluctant&quot;</p></td>
+<td><p>&quot;reluctant&quot;</p></td>
 </tr>
 <tr class="even">
 <td><p>target</p></td>
