@@ -1,4 +1,4 @@
-- Start Date: 2018-07-09
+﻿- Start Date: 2018-07-09
 - RFC PR: https://github.com/CppMicroServices/rfcs/pull/1
 - CppMicroServices Issue: https://github.com/CppMicroServices/CppMicroServices/issues/54
 
@@ -2019,7 +2019,7 @@ system.
 ### Sequence Diagrams
 
 The following diagrams show the control flow for various events in
-SCR.
+SCR. Note: There are two component configurations in SCR, Singleton and BundleOrPrototype. Only the Singleton configuration is represented in the diagrams.
 
 ##### SCRBundleActivator::Start
 
@@ -2065,7 +2065,7 @@ SCR.
 
 <html>
 
-<img src="0003-declarative-services/ComponentContextImpl_EnableComponent.svg" style="width:700px"/>
+<img src="0003-declarative-services/ComponentContextEnableComponent.svg" style="width:700px"/>
 
 </html>
 
@@ -2073,103 +2073,129 @@ SCR.
 
 <html>
 
-<img src="0003-declarative-services/ComponentContextImpl_DisableComponent.svg" style="width:700px"/>
+<img src="0003-declarative-services/ComponentContextDisableComponent.svg" style="width:700px"/>
 
 </html>
 
-##### ComponentManager::Enable
+##### ComponentManagerImpl::Enable
 
 <html>
 
-<img src="0003-declarative-services/ComponentManager_Enable.svg" style="width:50%"/>
+<img src="0003-declarative-services/ComponentManagerEnable.svg" style="width:800px"/>
 
 </html>
 
-##### ComponentManager::Disable
+##### ComponentManagerImpl::Disable
 
 <html>
 
-<img src="0003-declarative-services/ComponentManager_Disable.svg" style="width:50%"/>
+<img src="0003-declarative-services/ComponentManagerDisable.svg" style="width:800px"/>
 
 </html>
 
-##### ComponentConfiguration::Resolve
+##### ComponentConfigurationImpl::CreateConfigurationManager
 
 <html>
 
-<img src="0003-declarative-services/ComponentConfiguration_Resolve.svg" style="width:40%"/>
+<img src="0003-declarative-services/ComponentConfigurationCreateConfigurationManager.svg" style="width:800px"/>
 
 </html>
 
-##### ComponentConfiguration::GetService
+##### ComponentConfigurationImpl::Initialize
 
 <html>
 
-<img src="0003-declarative-services/ComponentConfiguration_GetService.svg" style="width:40%"/>
+<img src="0003-declarative-services/ComponentConfigurationInitialize.svg" style="width:800px"/>
 
 </html>
 
-##### UnsatisfiedReferenceState::Register
+##### SingletonComponentConfiguration::GetService
+##### BundleOrPrototypeComponentConfiguration::GetService
 
 <html>
 
-<img src="0003-declarative-services/UnsatisfiedReferenceState_Register.svg" style="width:50%"/>
+<img src="0003-declarative-services/ComponentConfigurationGetService.svg" style="width:800px"/>
 
 </html>
 
-##### SatisfiedState::Activate
+##### CCUnsatisfiedReferenceState::Register
 
 <html>
 
-<img src="0003-declarative-services/SatisfiedState_Activate.svg" style="width:50%"/>
+<img src="0003-declarative-services/UnsatisfiedStateRegister.svg" style="width:800px"/>
 
 </html>
 
-##### SatisfiedState::DoActivate
+##### CCRegisteredState::Activate
 
 <html>
 
-<img src="0003-declarative-services/SatisfiedState_DoActivate.svg" style="width:50%"/>
+<img src="0003-declarative-services/RegisteredStateActivate.svg" style="width:800px"/>
 
 </html>
 
-##### SatisfiedState::Deactivate
+##### CCActiveState::Activate
 
 <html>
 
-<img src="0003-declarative-services/SatisfiedState_Deactivate.svg" style="width:50%"/>
+<img src="0003-declarative-services/ActiveStateActivate.svg" style="width:800px"/>
 
 </html>
 
-##### SatisfiedState::DoDeactivate
+##### CCSatisfiedState::Deactivate
 
 <html>
 
-<img src="0003-declarative-services/SatisfiedState_DoDeactivate.svg" style="width:30%"/>
+<img src="0003-declarative-services/SatisfiedStateDeactivate.svg" style="width:800px"/>
 
 </html>
 
-##### ActiveState::DoDeactivate
+##### ReferenceManagerImpl::AddingService binding policy is static reluctant
 
 <html>
 
-<img src="0003-declarative-services/ActiveState_DoDeactivate.svg" style="width:50%"/>
+<img src="0003-declarative-services/ReferenceManagerAddingServiceStaticReluctant.svg" style="width:800px"/>
 
 </html>
 
-##### ReferenceManager::AddingService
+##### ReferenceManagerImpl::AddingService binding policy is static greedy
 
 <html>
 
-<img src="0003-declarative-services/ReferenceManager_AddingService.svg" style="width:50%"/>
+<img src="0003-declarative-services/ReferenceManagerAddingServiceStaticGreedy.svg" style="width:800px"/>
 
 </html>
 
-##### ReferenceManager::RemovedService
+##### ReferenceManagerImpl::AddingService binding policy is dynamic 
 
 <html>
 
-<img src="0003-declarative-services/ReferenceManager_RemovedService.svg" style="width:50%"/>
+<img src="0003-declarative-services/ReferenceManagerAddingServiceDynamic.svg" style="width:800px"/>
+
+</html>
+
+##### ComponentConfigurationImpl::RefChangedState(Rebind)
+
+<html>
+
+<img src="0003-declarative-services/ComponentConfigurationRebind.svg" style="width:800px"/>
+
+</html>
+
+##### ReferenceManagerImpl::RemovedService static binding policy
+
+<html>
+
+<img src="0003-declarative-services/ReferenceManagerRemovedServiceStatic.svg" style="width:800px"/>
+
+</html>
+
+
+##### ReferenceManagerImpl::RemovedService dynamic binding policy
+
+<html>
+
+<img src="0003-declarative-services/ReferenceManagerRemovedServiceDynamic.svg" style="width:800px"/>
 
 </html>
 
