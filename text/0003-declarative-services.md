@@ -2146,7 +2146,7 @@ SCR. Note: There are two component configurations in SCR, Singleton and BundleOr
 
 <html>
 
-<img src="0003-declarative-services/SatisfiedStateDeactivate.svg" style="width:800px"/>
+<img src="0003-declarative-services/SatisfiedStateDeActivate.svg" style="width:800px"/>
 
 </html>
 
