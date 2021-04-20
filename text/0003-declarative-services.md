@@ -376,12 +376,12 @@ The design can be divided into the following functional pieces:
 
 ### <u>Service Component Description JSON specification</u>
 
-Service component description is the declaration of the service
-component. The description is included in the bundle's `manifest.json`
-file.
+Service component description is the declaration of the service component. The description is included in the bundle's `manifest.json` file.
 
-The following are the various elements of the JSON segment that forms
-the Component Description.  
+The following are the various elements of the JSON segment that forms the Component Description.
+
+**NOTE:** <u>Some elements are not supported or were supported in later versions. These will be marked in the tables below. Unless otherwise noted, all SCR Component Description elements are supported in version 1.0.0</u>
+
 **scr**  
 *scr* is the root element of declarative services metadata in the
 bundle's manifest file. The presence of this key in the bundle's
@@ -487,8 +487,8 @@ See <a href="Declarative_Services_RFA#Dependency_Injection" title="wikilink">Dep
 <ol>
 <li>&quot;1..1&quot; : Mandatory &amp; Unary</li>
 <li>&quot;0..1&quot; : Optional &amp; Unary</li>
-<li>&quot;1..n&quot; : Mandatory &amp; Multiple</li>
-<li>&quot;0..n&quot; : Optional &amp; Multiple</li>
+<li>&quot;1..n&quot; : Mandatory &amp; Multiple <b>[Not Supported]</b></li>
+<li>&quot;0..n&quot; : Optional &amp; Multiple <b>[Not Supported]</b></li>
 </ol></td>
 <td>No</td>
 <td><p>&quot;1..1&quot; - Mandatory &amp; Unary</p></td>
@@ -499,10 +499,10 @@ See <a href="Declarative_Services_RFA#Dependency_Injection" title="wikilink">Dep
 <td><p>The policy describes the dynamic nature of the component. Possible values are:</p>
 <ol>
 <li>&quot;static&quot; - Anytime a dependency becomes unsatisfied, the component instance is deactivated.</li>
-<li>&quot;dynamic&quot; - The component dependencies are rebound without deactivating the component.<br />
+<li>&quot;dynamic&quot; - The component dependencies are rebound without deactivating the component. <b>[Supported starting in version 1.1.0]</b><br />
 </li>
 </ol>
-<p><strong>Note:</strong> <em>Dynamic policy is not supported in iteration 1. See <a href="Declarative_Services_RFA#Compatibility" title="wikilink">Compatibility</a> section for more details</em></p></td>
+</td>
 <td>No</td>
 <td><p>&quot;static&quot;</p></td>
 </tr>
