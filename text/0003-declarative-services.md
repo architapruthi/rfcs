@@ -409,8 +409,11 @@ elements of a JSON object representing the service component:
 |service|map|A JSON object in the format described in the service element specification below.|No|null object|
 |references|array|An array of JSON objects, each object in the format described in the references element specification below.|No|null object|
 |inject-references|bool|A value indicating whether the references need to be injected into the component instance. Valid values are  <br> false - References are not injected into the instance, however, they are available through the lookup strategy if the instance needs to retrieve them. See LocateService(s) API on ComponentContext class. <br> true - References are injected using constructor injection. See Constructor Injection. If the "policy" key of the reference is "dynamic, then Bind/Unbind methods of the reference are also used. The convention for the methods is "Bind" & "Unbind", where ReferenceName is the value specified by the "name" key. See Dependency Injection|No|true|
-
-**service**  
+|configuration-policy|string|Controls whether component configurations must be satisfied depending on the presence of one or more Configuration objects in Configuration Admin. Valid values are <br>optional - Use the Configuration object(s) if present but allow the component to be satisfied even if the Configuration object(s) are not present. <br>require - The Configuration object(s) must be present in Configuration Admin for the component to become satisfied. <br>ignore - Always allow the component configuration to be satisfied and do not use the Configuration object even if it is present. |No|"ignore". The configuration-policy will be set to "ignore" unless both the configuration-policy and the configuration-pid appear in the manifest.json file. |
+|configuration-pid|array|An array of configuration PIDs (Persistent Identities) to be used for the component in conjuction with Configuration Admin|No|None|
+|factory|string|If set to a non-empty string, it indicates that this component is a factory component. This attribute is the factory id for the component. This factory id can be used by a bundle to associate the factory with externally defined information. |No|Empty string|
+|factory-properties|map|These are only used for factory components (factory attribute has a non-empty string). These are the properties that will be registered for the factory component. |No|For factory components, when DS registers the properties for the factory component, DS adds <br>component.name - component name<br>component.factory - component factory id |
+**service**   
 The service element is a child of the component object and describes the
 service information that is used for service registration.
 
