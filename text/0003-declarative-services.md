@@ -578,6 +578,29 @@ See <a href="Declarative_Services_RFA#Dependency_Injection" title="wikilink">Dep
                 "properties": {},
                 "type": "object"
               },
+               "configuration-policy": {
+                "default": "ignore",
+                "id": "/properties/scr/properties/components/items/properties/configuration-policy",
+                "type": "string"
+              },
+              "configuration-pid": {
+                "id": "/properties/scr/properties/components/items/properties/configuration-pid",
+                "items": {
+                    "id": "/properties/scr/properties/components/items/properties/configuration-pid/items",
+                    "type": "string"
+                },
+                "type": "array"
+              }, 
+              "factory": {
+                 "default": "",
+                 "id": "/properties/scr/properties/components/items/properties/factory",
+                 "type": "string"
+              },
+              "factory-properties": {
+                "id": "/properties/scr/properties/components/items/properties/factory-properties",
+                "factory-properties": {},
+                "type": "object"
+              }, 
               "references": {
                 "id": "/properties/scr/properties/components/items/properties/references",
                 "items": {
@@ -696,6 +719,12 @@ schema:
                 "Service.description": "Sample Service",
                 "Service.vendor": "Foo Inc"
             },
+            "configuration-policy": "optional",                     // Specifies the configuration policy
+            "configuration-pid": ["sample.foo","sample.bar"],       // List of configuration objects
+            "factory" : "factory id",                               // Identifies this as a factory component
+            "factory-properties" : {                                // Custom factory component properties
+                "abc" : "123"
+            }, 
             "service": {                                            // Specifies the information needed for service registration
                 "scope": "singleton",                               // Specifies the scope of the registered service
                 "interfaces": ["cpp::util::Comparator"]             // Specifies the list of interfaces used to register the service
