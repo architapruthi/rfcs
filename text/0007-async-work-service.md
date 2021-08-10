@@ -79,7 +79,6 @@ defined here.
 ```c++
 namespace cppmicroservices { 
   namespace async {
-      namespace detail {
     /**
      *
      */
@@ -101,7 +100,6 @@ namespace cppmicroservices {
        */
       virtual void post(std::packaged_task<void()>&& task) = 0;
     };
-  }
   }
 }
 ```
