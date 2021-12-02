@@ -200,18 +200,18 @@ Would need one of these for every service. Unnecessary complication.
 ### Requirements
 
 
-| ID                                      | Statement                                                                                                                                                                                          | Pain Point ID / Rationale                                                                                                                                                                                                                                                                                               | Priority  |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| R1\_Constructor\_Injection              | Provide a service's configuration using the service implementation's constructor when the service is activated.| PP1                                                                                                                                                                                                                                                                                                                     | Must Have |
-| R2\_Update\_Config              | Update a service's configuration after the service is activated without deactivating and reactivating the service. This requires that the service author provide a "Modified" method that can be called by DS while the service is active to update configuration.  | PP1,PP2                                                                                                                                                                                                                                                                                                                     | Must Have |
-| R3\_Config\_Dependency           |Implement the configuration-policy feature. This controls whether service activation is dependent on configuration objects. <br>optional -  Use the corresponding configuration object if present but allow the component to be satisfied even if the corresponding configuration object is not present.<br>require - There must be a configuration object present in order for the component to be satisfied.<br>ignore - (default) Always allow the component to be satisfied and do not use the configuration object even if present.                                                                                |                                                                                                                      | Must Have |
-| R4\_Standardization              | Solution should follow the OSGI Config Admin and Declarative Services specifications as they make sense for C++.  | [OSGI Configuration Admin Specification](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html) [OSGI Declarative Services Specification](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html)                                                                                                                                                                                                                                                                                                                     | Must Have |
-| R5\_Usability           |Updating or receiving configuration should be simple for the Application Author or Service Author to implement. Any complexity should be in Config Admin or in DS.                                                                                   |  OSGI Config Admin spec - "Trade-offs in simplicity should be made at the expense of the bundle implementing the Configuration Admin service and in favor of bundles that need configuration information. The reason for this choice is that normal bundles will outnumber Configuration Admin bundles. "                                                                                                                   | Must Have |
-| R6\_Quality         |The solution should be robust  and bug-free.                                                                                   |                                                                                                                     | Must Have |
-| R7\_Multiple_Config         |Services may be dependent on more than one configuration.                                                                                |                                                                                                                     | Must Have |
-| R8\_Efficiency|The solution should be able to handle many bundles, configurations and services efficiently.                                                                                |                                                                                                                     | Must Have |
-| R9\_FactoryPids|The solution should support factory PIDS when configuration information is needed for services that can be instantiated multiple times.                                                                                |                                                                                                                     | Must Have |
-| R10_Update_Notification	|Notify user application that the configuration changes they have requested have been applied to the service.                                                                               |                                                                                                                     | Must Have |
+| ID                         | Statement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Pain Point ID / Rationale                                                                                                                                                                                                                                                                                | Priority  |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| R1\_Constructor\_Injection | Provide a service's configuration using the service implementation's constructor when the service is activated.                                                                                                                                                                                                                                                                                                                                                                                                                          | PP1                                                                                                                                                                                                                                                                                                      | Must Have |
+| R2\_Update\_Config         | Update a service's configuration after the service is activated without deactivating and reactivating the service. This requires that the service author provide a "Modified" method that can be called by DS while the service is active to update configuration.                                                                                                                                                                                                                                                                       | PP1,PP2                                                                                                                                                                                                                                                                                                  | Must Have |
+| R3\_Config\_Dependency     | Implement the configuration-policy feature. This controls whether service activation is dependent on configuration objects. <br>optional -  Use the corresponding configuration object if present but allow the component to be satisfied even if the corresponding configuration object is not present.<br>require - There must be a configuration object present in order for the component to be satisfied.<br>ignore - (default) Always allow the component to be satisfied and do not use the configuration object even if present. |                                                                                                                                                                                                                                                                                                          | Must Have |
+| R4\_Standardization        | Solution should follow the OSGI Config Admin and Declarative Services specifications as they make sense for C++.                                                                                                                                                                                                                                                                                                                                                                                                                         | [OSGI Configuration Admin Specification](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html) [OSGI Declarative Services Specification](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html)                                                                      | Must Have |
+| R5\_Usability              | Updating or receiving configuration should be simple for the Application Author or Service Author to implement. Any complexity should be in Config Admin or in DS.                                                                                                                                                                                                                                                                                                                                                                       | OSGI Config Admin spec - "Trade-offs in simplicity should be made at the expense of the bundle implementing the Configuration Admin service and in favor of bundles that need configuration information. The reason for this choice is that normal bundles will outnumber Configuration Admin bundles. " | Must Have |
+| R6\_Quality                | The solution should be robust  and bug-free.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                                                                                          | Must Have |
+| R7\_Multiple_Config        | Services may be dependent on more than one configuration.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                          | Must Have |
+| R8\_Efficiency             | The solution should be able to handle many bundles, configurations and services efficiently.                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                                                                                          | Must Have |
+| R9\_FactoryPids            | The solution should support factory PIDS when configuration information is needed for services that can be instantiated multiple times.                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                                                                                                                                                                          | Must Have |
+| R10_Update_Notification    | Notify user application that the configuration changes they have requested have been applied to the service.                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                                                                                          | Must Have |
 #### Out of Scope
 
   - All mentions of "Bundle Location" and restrictions based upon bundle locations in the OSGi 
@@ -262,12 +262,12 @@ for the integration of ConfigurationAdmin functionality are described in this do
 
 #### JSON Specification
 The following key-value pairs will be added to the service component of interest under the "components" section of Service Component Descriptions. Please refer to the Declarative Services Design Document for more information on the rest of the Service Component Description JSON specification.
-|Key|Value Type|Description|Mandatory|Default Value|
-|--- |--- |--- |--- |--- |
-|configuration-policy|string|Controls whether component configurations must be satisfied depending on the presence of a corresponding Configuration object in Configuration Admin service. A corresponding configuration is a Configuration object where the Persistent Identity (PID) is the name of the component. Valid values are<br> optional - Use the corresponding Configuration object if present but allow the component to be satisfied even if the corresponding Configuration object is not present.<br> require - There must be a corresponding Configuration object for the component configuration to become satisfied.<br>ignore - Always allow the component configuration to be satisfied and do not use the corresponding Configuration object even if it is present|No|"ignore". Note: the OSGI spec specifies a default value of "optional" for configuration-policy but for backwards compatibility reasons, a default of "ignore" has been implemented.|
-|configuration-pid|array|An array of configuration PIDs to be used for the component in conjunction with Configuration Admin. |No|None|
-|factory|string|If set to a non-empty string, it indicates that this component is a factory component. This attribute is the factory id for the factory component. This identifier can be used by a bundle to associate the factory with externally defined information.|No|Empty string|
-|factory-properties|object|These are only used for factory components. These are the service properties that will be registered for the factory component.|No|For factory components, DS adds:<br>component.name-component name<br>component.factory-component factory id|
+| Key                  | Value Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Mandatory | Default Value                                                                                                                                                                       |
+| -------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| configuration-policy | string     | Controls whether component configurations must be satisfied depending on the presence of a corresponding Configuration object in Configuration Admin service. A corresponding configuration is a Configuration object where the Persistent Identity (PID) is the name of the component. Valid values are<br> optional - Use the corresponding Configuration object if present but allow the component to be satisfied even if the corresponding Configuration object is not present.<br> require - There must be a corresponding Configuration object for the component configuration to become satisfied.<br>ignore - Always allow the component configuration to be satisfied and do not use the corresponding Configuration object even if it is present | No        | "ignore". Note: the OSGI spec specifies a default value of "optional" for configuration-policy but for backwards compatibility reasons, a default of "ignore" has been implemented. |
+| configuration-pid    | array      | An array of configuration PIDs to be used for the component in conjunction with Configuration Admin.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | No        | None                                                                                                                                                                                |
+| factory              | string     | If set to a non-empty string, it indicates that this component is a factory component. This attribute is the factory id for the factory component. This identifier can be used by a bundle to associate the factory with externally defined information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | No        | Empty string                                                                                                                                                                        |
+| factory-properties   | object     | These are only used for factory components. These are the service properties that will be registered for the factory component.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | No        | For factory components, DS adds:<br>component.name-component name<br>component.factory-component factory id                                                                         |
 
 ##### Schema and Example
 
@@ -1295,7 +1295,7 @@ Refer to the diagram in the DS RFC showing the functional units and their  inter
 correct but with the following additions.
 <html>
 
-<img src="0000-configadmin-ds-integration/FunctionalUnits.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/FunctionalUnits.svg" style="width:700px"/>
 
 </html>
 
@@ -1327,7 +1327,7 @@ Creates the ConfigurationNotifier object and publishes the ConfigurationListener
 object is created. This object contains a map of all listeners of configuration object changes. 
 <html>
 
-<img src="0000-configadmin-ds-integration/SCRActivatorClass.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/SCRActivatorClass.svg" style="width:700px"/>
 
 </html>
 
@@ -1335,7 +1335,7 @@ object is created. This object contains a map of all listeners of configuration 
 
 <html>
 
-<img src="0000-configadmin-ds-integration/SCRBundleExtensionClass.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/SCRBundleExtensionClass.svg" style="width:700px"/>
 
 </html>
 Parses the factory, factory-properties, configuration-policy and configuration-pid attributes in the component 
@@ -1358,7 +1358,7 @@ to the repository. DS is limited to the public interface and doesn't have access
 #### ComponentConfigurationImpl
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentConfigurationImplJustTheClass.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentConfigurationImplJustTheClass.svg" style="width:700px"/>
 
 </html>
 ComponentConfigurationImpl is responsible for determining whether a component is satisfied or unsatisfied and managing the 
@@ -1456,7 +1456,7 @@ invoked for each one.
 #### ComponentMetadata
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentMetadataClass.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentMetadataClass.svg" style="width:700px"/>
 
 </html>
 
@@ -1474,7 +1474,7 @@ The following diagram shows the new classes ConfigurationListenerImpl, Configura
 and their relationships with ComponentConfigurationImpl.
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentConfigurationImplClass.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentConfigurationImplClass.svg" style="width:700px"/>
 
 </html>
 
@@ -1539,7 +1539,7 @@ according to pid. The entry in the listenersMap for each pid is another map call
  using TokenMap = std::unordered_map<ListenerTokenId, Listener>;
 <html>
 
-<img src="0000-configadmin-ds-integration/TokenMapClass.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/TokenMapClass.svg" style="width:700px"/>
 
 </html>
 
@@ -1547,7 +1547,7 @@ The Listener class contains a callback function (ComponentConfigurationImpl::Con
 ConfigChangeNotification is as follows:
 <html>
 
-<img src="0000-configadmin-ds-integration/ConfigChangeNotificationClass.svg" style="width:500px"/>
+<img src="0008-configadmin-ds-integration/ConfigChangeNotificationClass.svg" style="width:500px"/>
 
 </html>
 where ConfigurationEventType is CM_UPDATED or CM_DELETED. 
@@ -1631,7 +1631,7 @@ during deactivation. It must unregister the configuration object listeners.
 
 <html>
 
-<img src="0000-configadmin-ds-integration/DisableComponent.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/DisableComponent.svg" style="width:700px"/>
 
 </html>
 
@@ -1641,7 +1641,7 @@ In this diagram ComponentConfiguration must now also consider whether or not the
 registering the component so this diagram changes as follows:
 <html>
 
-<img src="0000-configadmin-ds-integration/DependencyAvailable.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/DependencyAvailable.svg" style="width:700px"/>
 
 </html>
 
@@ -1658,7 +1658,7 @@ Instance if it's available (9.1). If the Modify method is not available, it will
 
 <html>
 
-<img src="0000-configadmin-ds-integration/ConfigObjectUpdated.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ConfigObjectUpdated.svg" style="width:700px"/>
 
 </html>
 
@@ -1667,7 +1667,7 @@ Instance if it's available (9.1). If the Modify method is not available, it will
 The following diagram illustrates what happens when a component that is currently active receives notification of a deleted configuration object on which it is dependent. The component is no longer satisfied.
 <html>
 
-<img src="0000-configadmin-ds-integration/ConfigObjectDeleted.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ConfigObjectDeleted.svg" style="width:700px"/>
 
 </html>
 
@@ -1680,76 +1680,76 @@ for the remaining sequence diagrams.
 #### SCRActivator::Start
 <html>
 
-<img src="0000-configadmin-ds-integration/SCRBundleActivatorStart.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/SCRBundleActivatorStart.svg" style="width:700px"/>
 
 </html>
 
 #### SCRActivator::Stop
 <html>
 
-<img src="0000-configadmin-ds-integration/SCRBundleActivatorStop.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/SCRBundleActivatorStop.svg" style="width:700px"/>
 
 </html>
 
 #### ComponentManager::Enable
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentManagerEnable.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentManagerEnable.svg" style="width:700px"/>
 
 </html>
 
 #### ComponentManager::Disable
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentManagerDisable.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentManagerDisable.svg" style="width:700px"/>
 
 </html>
 
 #### ComponentConfiguration::CreateConfigurationManager
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentConfigurationCreateConfigurationManager.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentConfigurationCreateConfigurationManager.svg" style="width:700px"/>
 
 </html>
 
 #### ComponentConfiguration::Initialize
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentConfigurationInitialize.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentConfigurationInitialize.svg" style="width:700px"/>
 
 </html>
 
 #### ConfigurationListener::configurationEvent(CM_UPDATED)
 <html>
 
-<img src="0000-configadmin-ds-integration/ConfigurationListenerConfigEvent.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ConfigurationListenerConfigEvent.svg" style="width:700px"/>
 
 </html>
 
 #### ComponentConfiguration::ConfigSatisfied
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentConfigurationRefChangedSatisfied.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentConfigurationRefChangedSatisfied.svg" style="width:700px"/>
 
 </html>
 
 #### ConfigurationListener::configurationEvent(CM_DELETED)
 <html>
 
-<img src="0000-configadmin-ds-integration/ConfigurationListenerConfigEventDeleted.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ConfigurationListenerConfigEventDeleted.svg" style="width:700px"/>
 
 </html>
 #### ComponentConfiguration::ConfigUnsatisfied
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentConfigurationRefChangedUnsatisfied.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentConfigurationRefChangedUnsatisfied.svg" style="width:700px"/>
 
 </html>
 
 #### ComponentConfiguration::Resolve
 <html>
 
-<img src="0000-configadmin-ds-integration/ComponentConfigurationResolve.svg" style="width:700px"/>
+<img src="0008-configadmin-ds-integration/ComponentConfigurationResolve.svg" style="width:700px"/>
 
 </html>
 
