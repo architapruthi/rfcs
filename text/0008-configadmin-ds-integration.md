@@ -454,8 +454,8 @@ schema:
             "enabled": true,  
             "implementation-class": "sample::impl::LogLookupImpl", 
             "properties": {                                        // Specifies the custom properties for the service component
-                "Service.description": "Sample Service",
-                "Service.vendor": "Foo Inc"
+                "service.description": "Sample Service",
+                "service.vendor": "Foo Inc"
             },
             "configuration-policy": "optional",                    // Specifies the configuration policy
             "configuration-pid": ["sample.foo","sample.bar"],      // List of configuration objects on which the component is dependent
