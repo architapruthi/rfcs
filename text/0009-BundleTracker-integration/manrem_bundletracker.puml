@@ -1,0 +1,20 @@
+@startuml manrembundle_diagram
+:Client: as Client
+
+rectangle "BundleTracker" as BT
+'rectangle "BundleTrackerPrivate" as BTP
+rectangle "TrackedBundle" as TB
+'rectangle "BundleContext" as BC
+rectangle "BundleAbstractTracked" as BAT
+rectangle "BundleTrackerCustomizer" as BTC
+
+Client -> BT : 1: Remove()
+BT -d- TB : 2: Check open
+BT -> BAT : 3: Untrack()
+TB <- BAT : 4: CustomizerRemoved()
+TB -d-> BTC : 5: RemovedBundle()
+
+note bottom of BAT : Removed Bundle from map\nIncrement count
+
+
+@enduml
