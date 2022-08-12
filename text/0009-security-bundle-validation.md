@@ -201,7 +201,7 @@ The following diagram is a simplified version of what happens when a CppMicroSer
 
 Bundle validation function will be called before the bundle's shared library is loaded into the process by CppMicroServices.
 
-![Sequence Diagram for most common Bundle Start workflow](security-bundle-validation/ServiceInteraction_Coreframework.png)
+![Sequence Diagram for most common Bundle Start workflow](security-bundle-validation/ServiceInteraction_CoreFramework.png)
 
 ## How we teach this
 
