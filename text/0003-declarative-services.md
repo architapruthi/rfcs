@@ -491,8 +491,8 @@ See <a href="Declarative_Services_RFA#Dependency_Injection" title="wikilink">Dep
 <ol>
 <li>&quot;1..1&quot; : Mandatory &amp; Unary</li>
 <li>&quot;0..1&quot; : Optional &amp; Unary</li>
-<li>&quot;1..n&quot; : Mandatory &amp; Multiple <b>[Not Supported]</b></li>
-<li>&quot;0..n&quot; : Optional &amp; Multiple <b>[Not Supported]</b></li>
+<li>&quot;1..n&quot; : Mandatory &amp; Multiple </li>
+<li>&quot;0..n&quot; : Optional &amp; Multiple </li>
 </ol></td>
 <td>No</td>
 <td><p>&quot;1..1&quot; - Mandatory &amp; Unary</p></td>
