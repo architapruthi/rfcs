@@ -12,6 +12,16 @@ This task is to support latest OSGi features in LogService class (according to O
 ## Motivation
 
 The current CppMicroServices LogService API and implementation that we ship with CppMicroServices does not confirm to the latest LogService OSGi spec.
+The current 'LogService' class diagram looks like-
+
+![Old LogService class](https://github.com/architapruthi/rfcs/blob/master/logService_old.png)
+
+Everything within red is not supported.
+
+Now, according to the latest OSGi spec, the 'LogService' looks like-
+
+![New LogService class](https://github.com/architapruthi/rfcs/blob/master/logService_new.png)
+
 The latest spec introduces LoggerFactory service interface that allows a bundle to obtain a Logger. And the Logger in turn allows a bundle to log information, including a message, a level, an exception, and a ServiceReference object.
 Hence, the task is to update the implementation of open-source LogService and stay current with the latest OSGi standard.
 
